@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who's Imposter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Who's Imposter?</h1>
+
+  <!-- HOME -->
+  <div id="home">
+    <button onclick="createRoom()">Create Room</button>
+    <input id="roomInput" placeholder="Room Code">
+    <button onclick="joinRoom()">Join</button>
+    <p id="homeMsg"></p>
+  </div>
+
+  <!-- PROFILE -->
+  <div id="profile" class="hidden">
+    <h2>Enter Name</h2>
+    <input id="nameInput" placeholder="Your name">
+    <button onclick="saveProfile()">Continue</button>
+  </div>
+
+  <!-- LOBBY -->
+  <div id="lobby" class="hidden">
+    <h2>Lobby - Room: <span id="roomCode"></span></h2>
+    <div id="players"></div>
+    <button onclick="ready()">Ready</button>
+  </div>
+
+  <!-- ROLE -->
+  <div id="role" class="hidden">
+    <h2>Your Role</h2>
+    <div id="roleText"></div>
+    <button onclick="goVote()">Go To Vote</button>
+  </div>
+
+  <!-- VOTE -->
+  <div id="vote" class="hidden">
+    <h2>Vote</h2>
+    <div id="voteList"></div>
+    <button onclick="showResult()">Show Result</button>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result" class="hidden">
+    <h2>Result</h2>
+    <div id="resultText"></div>
+    <button onclick="newRound()">New Round</button>
+  </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
